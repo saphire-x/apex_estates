@@ -1,35 +1,35 @@
 -- Add all the datapopulation queries in this table
 INSERT INTO property (property_id,agentID,sellerID,title,property_type,listing_type,price,area_sqft,bhk,house_no,house_name,locality_name,city,pincode,status,listed_on,updated_on,year_built) VALUES
-('0',NULL,'34','3 BHK Apartment in CHRISTIAN BASTI','mansion','rent','4500000','1500.0','3.0','115','Green Villa','CHRISTIAN BASTI','Guwahati','781661','sold','2023-04-14','2024-06-30','2022'),
-('1',NULL,'34','3 BHK Apartment in LAL GANESH','duplex','sale','7879000','1751.0','3.0','124','Blue Nest','LAL GANESH','Guwahati','781863','available','2023-06-03','2024-01-25','2014'),
-('2',NULL,'17','2 BHK Apartment in BORAGAON','apartment','sale','3150000','750.0','2.0','83','Silver Heights','BORAGAON','Guwahati','781474','available','2023-01-06','2024-04-03','2021'),
-('3',NULL,'12','2 BHK Apartment in BAGHARBARI','duplex','rent','5000000','1100.0','2.0','30','Silver Heights','BAGHARBARI','Guwahati','781574','rented','2023-04-08','2023-11-28','2006'),
-('4',NULL,'24','3 BHK Apartment in BELTOLA','flat','sale','6520000','1630.0','3.0','20','Sun Residency','BELTOLA','Guwahati','781972','sold','2023-09-20','2024-07-20','2008'),
-('5',NULL,'11','3 BHK Apartment in AHOM GAON','house','rent','4996000','1249.0','3.0','85','Blue Nest','AHOM GAON','Guwahati','781653','rented','2023-02-11','2024-02-18','2011'),
-('6',NULL,'41','4 BHK Apartment in BAMUNIMAIDAM','triplex','rent','6400000','1400.0','4.0','150','Blue Nest','BAMUNIMAIDAM','Guwahati','781494','sold','2023-02-07','2023-10-31','2004'),
-('7',NULL,'48','2 BHK Apartment in KAHILIPARA','apartment','rent','4000000','900.0','2.0','63','Green Villa','KAHILIPARA','Guwahati','781880','sold','2023-03-15','2024-02-19','2025'),
-('8',NULL,'10','3 BHK Apartment in BELTOLA','house','sale','6500000','1300.0','3.0','45','Blue Nest','BELTOLA','Guwahati','781582','sold','2023-05-19','2024-02-08','2009'),
-('9',NULL,'38','3 BHK Apartment in SIX MILE','triplex','rent','7425000','1650.0','3.0','131','Green Villa','SIX MILE','Guwahati','781423','available','2023-09-05','2023-11-20','2015'),
-('10',NULL,'35','3 BHK Apartment in KAHILIPARA','house','sale','5630000','1320.0','3.0','86','Green Villa','KAHILIPARA','Guwahati','781599','available','2023-09-19','2024-01-25','2022'),
-('11',NULL,'26','4 BHK Apartment in REHABARI','bungalow','rent','25600000','3425.0','4.0','88','Sun Residency','REHABARI','Guwahati','781116','rented','2023-09-14','2024-06-19','2008'),
-('12',NULL,'1','1 BHK Apartment in SIX MILE','villa','sale','3200000','660.0','1.0','66','Green Villa','SIX MILE','Guwahati','781171','available','2023-06-02','2024-03-05','2011'),
-('13',NULL,'29','3 BHK Apartment in LOKHRA','apartment','rent','6500000','1300.0','3.0','72','Silver Heights','LOKHRA','Guwahati','781233','rented','2023-01-05','2024-06-07','2000'),
-('14',NULL,'20','2 BHK Apartment in LAL GANESH','triplex','sale','4250000','860.0','2.0','142','Blue Nest','LAL GANESH','Guwahati','781647','rented','2023-03-10','2024-07-23','2021'),
-('15',NULL,'12','3 BHK Apartment in KAHILIPARA','triplex','sale','5950000','1150.0','3.0','57','Silver Heights','KAHILIPARA','Guwahati','781885','available','2023-10-11','2024-03-19','2005'),
-('16',NULL,'39','2 BHK Apartment in BELTOLA','bungalow','sale','4700000','1023.0','2.0','138','Blue Nest','BELTOLA','Guwahati','781428','sold','2023-10-24','2024-04-22','2010'),
-('17',NULL,'7','3 BHK Apartment in JYOTIKUCHI','apartment','sale','3600000','850.0','3.0','48','Sun Residency','JYOTIKUCHI','Guwahati','781124','sold','2023-03-16','2024-02-18','2016'),
-('18',NULL,'7','3 BHK Apartment in BAMUNIMAIDAM','mansion','rent','6673000','1405.0','3.0','47','Green Villa','BAMUNIMAIDAM','Guwahati','781873','rented','2023-07-18','2024-01-29','2012'),
-('19',NULL,'44','3 BHK Apartment in SARANIA HILLS','apartment','rent','5100000','1150.0','3.0','94','Green Villa','SARANIA HILLS','Guwahati','781235','rented','2023-05-10','2024-06-13','2019'),
-('20',NULL,'35','3 BHK Apartment in SIX MILE','duplex','sale','6500000','1300.0','3.0','10','Silver Heights','SIX MILE','Guwahati','781196','available','2023-04-18','2024-03-31','2018'),
-('21',NULL,'43','3 BHK Apartment in GANESHGURI','bungalow','rent','6400000','1030.0','3.0','95','Sun Residency','GANESHGURI','Guwahati','781031','available','2023-10-10','2023-12-21','2024'),
-('22',NULL,'6','3 BHK Apartment in BELTOLA','mansion','sale','6520000','1630.0','3.0','123','Sun Residency','BELTOLA','Guwahati','781313','rented','2023-06-06','2024-04-03','2010'),
-('23',NULL,'3','2 BHK Apartment in AHOM GAON','villa','sale','3444000','861.0','2.0','124','Blue Nest','AHOM GAON','Guwahati','781748','sold','2023-06-04','2023-12-25','2010'),
-('24',NULL,'14','4 BHK Apartment in KAHILIPARA','villa','sale','7750000','1350.0','4.0','18','Silver Heights','KAHILIPARA','Guwahati','781097','available','2023-05-25','2024-08-16','2009'),
-('25',NULL,'9','2 BHK Apartment in SACHAL PATH VIP ROAD BYLANE NUMBER 1','house','rent','4300000','1000.0','2.0','81','Sun Residency','SACHAL PATH VIP ROAD BYLANE NUMBER 1','Guwahati','781507','sold','2023-08-18','2023-10-31','2018'),
-('26',NULL,'20','2 BHK Apartment in CHANDMARI','mansion','rent','6480000','909.0','2.0','45','Blue Nest','CHANDMARI','Guwahati','781605','sold','2023-10-13','2023-11-14','2020'),
-('27',NULL,'14','2 BHK Apartment in NOONMATI','triplex','rent','4700000','1150.0','2.0','61','Green Villa','NOONMATI','Guwahati','781825','rented','2023-03-22','2024-04-14','2021'),
-('28',NULL,'38','3 BHK Apartment in ULUBARI','villa','rent','8000000','1380.0','3.0','68','Sun Residency','ULUBARI','Guwahati','781965','sold','2023-09-14','2024-04-14','2025'),
-('29',NULL,'10','3 BHK Apartment in DISPUR','bungalow','sale','9900000','1990.0','3.0','135','Green Villa','DISPUR','Guwahati','781657','sold','2023-10-19','2024-07-01','2010'),
+('0',NULL,'34','3 BHK Apartment in CHRISTIAN BASTI','mansion','sold','4500000','1500.0','3.0','115','Green Villa','CHRISTIAN BASTI','Guwahati','781661','sold','2023-04-14','2024-06-30','2022'),
+('1',NULL,'34','3 BHK Apartment in LAL GANESH','duplex','sold','7879000','1751.0','3.0','124','Blue Nest','LAL GANESH','Guwahati','781863','available','2023-06-03','2024-01-25','2014'),
+('2',NULL,'17','2 BHK Apartment in BORAGAON','apartment','sold','3150000','750.0','2.0','83','Silver Heights','BORAGAON','Guwahati','781474','available','2023-01-06','2024-04-03','2021'),
+('3',NULL,'12','2 BHK Apartment in BAGHARBARI','duplex','sold','5000000','1100.0','2.0','30','Silver Heights','BAGHARBARI','Guwahati','781574','rented','2023-04-08','2023-11-28','2006'),
+('4',NULL,'24','3 BHK Apartment in BELTOLA','flat','sold','6520000','1630.0','3.0','20','Sun Residency','BELTOLA','Guwahati','781972','sold','2023-09-20','2024-07-20','2008'),
+('5',NULL,'11','3 BHK Apartment in AHOM GAON','house','rented','4996000','1249.0','3.0','85','Blue Nest','AHOM GAON','Guwahati','781653','rented','2023-02-11','2024-02-18','2011'),
+('6',NULL,'41','4 BHK Apartment in BAMUNIMAIDAM','triplex','rented','6400000','1400.0','4.0','150','Blue Nest','BAMUNIMAIDAM','Guwahati','781494','sold','2023-02-07','2023-10-31','2004'),
+('7',NULL,'48','2 BHK Apartment in KAHILIPARA','apartment','sold','4000000','900.0','2.0','63','Green Villa','KAHILIPARA','Guwahati','781880','sold','2023-03-15','2024-02-19','2025'),
+('8',NULL,'10','3 BHK Apartment in BELTOLA','house','sold','6500000','1300.0','3.0','45','Blue Nest','BELTOLA','Guwahati','781582','sold','2023-05-19','2024-02-08','2009'),
+('9',NULL,'38','3 BHK Apartment in SIX MILE','triplex','rented','7425000','1650.0','3.0','131','Green Villa','SIX MILE','Guwahati','781423','available','2023-09-05','2023-11-20','2015'),
+('10',NULL,'35','3 BHK Apartment in KAHILIPARA','house','sold','5630000','1320.0','3.0','86','Green Villa','KAHILIPARA','Guwahati','781599','available','2023-09-19','2024-01-25','2022'),
+('11',NULL,'26','4 BHK Apartment in REHABARI','bungalow','rented','25600000','3425.0','4.0','88','Sun Residency','REHABARI','Guwahati','781116','rented','2023-09-14','2024-06-19','2008'),
+('12',NULL,'1','1 BHK Apartment in SIX MILE','villa','sold','3200000','660.0','1.0','66','Green Villa','SIX MILE','Guwahati','781171','available','2023-06-02','2024-03-05','2011'),
+('13',NULL,'29','3 BHK Apartment in LOKHRA','apartment','rented','6500000','1300.0','3.0','72','Silver Heights','LOKHRA','Guwahati','781233','rented','2023-01-05','2024-06-07','2000'),
+('14',NULL,'20','2 BHK Apartment in LAL GANESH','triplex','sold','4250000','860.0','2.0','142','Blue Nest','LAL GANESH','Guwahati','781647','rented','2023-03-10','2024-07-23','2021'),
+('15',NULL,'12','3 BHK Apartment in KAHILIPARA','triplex','rented','5950000','1150.0','3.0','57','Silver Heights','KAHILIPARA','Guwahati','781885','available','2023-10-11','2024-03-19','2005'),
+('16',NULL,'39','2 BHK Apartment in BELTOLA','bungalow','sold','4700000','1023.0','2.0','138','Blue Nest','BELTOLA','Guwahati','781428','sold','2023-10-24','2024-04-22','2010'),
+('17',NULL,'7','3 BHK Apartment in JYOTIKUCHI','apartment','rented','3600000','850.0','3.0','48','Sun Residency','JYOTIKUCHI','Guwahati','781124','sold','2023-03-16','2024-02-18','2016'),
+('18',NULL,'7','3 BHK Apartment in BAMUNIMAIDAM','mansion','sold','6673000','1405.0','3.0','47','Green Villa','BAMUNIMAIDAM','Guwahati','781873','rented','2023-07-18','2024-01-29','2012'),
+('19',NULL,'44','3 BHK Apartment in SARANIA HILLS','apartment','rented','5100000','1150.0','3.0','94','Green Villa','SARANIA HILLS','Guwahati','781235','rented','2023-05-10','2024-06-13','2019'),
+('20',NULL,'35','3 BHK Apartment in SIX MILE','duplex','sold','6500000','1300.0','3.0','10','Silver Heights','SIX MILE','Guwahati','781196','available','2023-04-18','2024-03-31','2018'),
+('21',NULL,'43','3 BHK Apartment in GANESHGURI','bungalow','rented','6400000','1030.0','3.0','95','Sun Residency','GANESHGURI','Guwahati','781031','available','2023-10-10','2023-12-21','2024'),
+('22',NULL,'6','3 BHK Apartment in BELTOLA','mansion','sold','6520000','1630.0','3.0','123','Sun Residency','BELTOLA','Guwahati','781313','rented','2023-06-06','2024-04-03','2010'),
+('23',NULL,'3','2 BHK Apartment in AHOM GAON','villa','rented','3444000','861.0','2.0','124','Blue Nest','AHOM GAON','Guwahati','781748','sold','2023-06-04','2023-12-25','2010'),
+('24',NULL,'14','4 BHK Apartment in KAHILIPARA','villa','sold','7750000','1350.0','4.0','18','Silver Heights','KAHILIPARA','Guwahati','781097','available','2023-05-25','2024-08-16','2009'),
+('25',NULL,'9','2 BHK Apartment in SACHAL PATH VIP ROAD BYLANE NUMBER 1','house','rented','4300000','1000.0','2.0','81','Sun Residency','SACHAL PATH VIP ROAD BYLANE NUMBER 1','Guwahati','781507','sold','2023-08-18','2023-10-31','2018'),
+('26',NULL,'20','2 BHK Apartment in CHANDMARI','mansion','sold','6480000','909.0','2.0','45','Blue Nest','CHANDMARI','Guwahati','781605','sold','2023-10-13','2023-11-14','2020'),
+('27',NULL,'14','2 BHK Apartment in NOONMATI','triplex','rented','4700000','1150.0','2.0','61','Green Villa','NOONMATI','Guwahati','781825','rented','2023-03-22','2024-04-14','2021'),
+('28',NULL,'38','3 BHK Apartment in ULUBARI','villa','sold','8000000','1380.0','3.0','68','Sun Residency','ULUBARI','Guwahati','781965','sold','2023-09-14','2024-04-14','2025'),
+('29',NULL,'10','3 BHK Apartment in DISPUR','bungalow','rented','9900000','1990.0','3.0','135','Green Villa','DISPUR','Guwahati','781657','sold','2023-10-19','2024-07-01','2010'),
 ('30',NULL,'17','3 BHK Apartment in BELTOLA','duplex','sale','7368000','1842.0','3.0','124','Silver Heights','BELTOLA','Guwahati','781367','available','2023-10-18','2024-07-01','2012'),
 ('31',NULL,'14','3 BHK Apartment in AHOM GAON','duplex','sale','4556000','1114.0','3.0','92','Blue Nest','AHOM GAON','Guwahati','781662','rented','2023-08-12','2023-12-27','2004'),
 ('32',NULL,'37','3 BHK Apartment in BELTOLA','apartment','sale','6136000','1180.0','3.0','56','Sun Residency','BELTOLA','Guwahati','781351','rented','2023-02-08','2024-05-05','2023'),
@@ -121,3 +121,232 @@ INSERT INTO property (property_id,agentID,sellerID,title,property_type,listing_t
 ('118',NULL,'11','2 BHK Apartment in CHRISTIAN BASTI','flat','sale','6500000','1000.0','2.0','107','Blue Nest','CHRISTIAN BASTI','Guwahati','781544','sold','2023-04-12','2024-02-04','2017'),
 ('119',NULL,'44','3 BHK Apartment in GHORAMARA','villa','rent','6500000','1500.0','3.0','66','Green Villa','GHORAMARA','Guwahati','781985','available','2023-03-04','2024-03-18','2017');
 
+-- Data for users
+INSERT INTO users (userId, name, email, phoneNumber, passwordHash) VALUES
+(1,'Aarav Sharma','aarav1@gmail.com','9876543210','hash1'),
+(2,'Vivaan Singh','vivaan2@gmail.com','9876543211','hash2'),
+(3,'Aditya Kumar','aditya3@gmail.com','9876543212','hash3'),
+(4,'Vihaan Gupta','vihaan4@gmail.com','9876543213','hash4'),
+(5,'Arjun Verma','arjun5@gmail.com','9876543214','hash5'),
+(6,'Sai Patel','sai6@gmail.com','9876543215','hash6'),
+(7,'Reyansh Mehta','reyansh7@gmail.com','9876543216','hash7'),
+(8,'Krishna Iyer','krishna8@gmail.com','9876543217','hash8'),
+(9,'Ishaan Nair','ishaan9@gmail.com','9876543218','hash9'),
+(10,'Shaurya Das','shaurya10@gmail.com','9876543219','hash10'),
+
+(11,'Ananya Sharma','ananya11@gmail.com','9876543220','hash11'),
+(12,'Diya Singh','diya12@gmail.com','9876543221','hash12'),
+(13,'Saanvi Gupta','saanvi13@gmail.com','9876543222','hash13'),
+(14,'Aadhya Patel','aadhya14@gmail.com','9876543223','hash14'),
+(15,'Pari Mehta','pari15@gmail.com','9876543224','hash15'),
+(16,'Myra Iyer','myra16@gmail.com','9876543225','hash16'),
+(17,'Riya Nair','riya17@gmail.com','9876543226','hash17'),
+(18,'Ira Das','ira18@gmail.com','9876543227','hash18'),
+(19,'Sara Khan','sara19@gmail.com','9876543228','hash19'),
+(20,'Zara Ali','zara20@gmail.com','9876543229','hash20'),
+
+(21,'Kabir Joshi','kabir21@gmail.com','9876543230','hash21'),
+(22,'Aryan Roy','aryan22@gmail.com','9876543231','hash22'),
+(23,'Yash Jain','yash23@gmail.com','9876543232','hash23'),
+(24,'Harsh Agarwal','harsh24@gmail.com','9876543233','hash24'),
+(25,'Rohan Bansal','rohan25@gmail.com','9876543234','hash25'),
+(26,'Kunal Arora','kunal26@gmail.com','9876543235','hash26'),
+(27,'Nikhil Sethi','nikhil27@gmail.com','9876543236','hash27'),
+(28,'Manav Kapoor','manav28@gmail.com','9876543237','hash28'),
+(29,'Dev Malhotra','dev29@gmail.com','9876543238','hash29'),
+(30,'Om Prakash','om30@gmail.com','9876543239','hash30'),
+
+(31,'Neha Sharma','neha31@gmail.com','9876543240','hash31'),
+(32,'Pooja Singh','pooja32@gmail.com','9876543241','hash32'),
+(33,'Sneha Gupta','sneha33@gmail.com','9876543242','hash33'),
+(34,'Kavya Patel','kavya34@gmail.com','9876543243','hash34'),
+(35,'Meera Mehta','meera35@gmail.com','9876543244','hash35'),
+(36,'Aisha Iyer','aisha36@gmail.com','9876543245','hash36'),
+(37,'Naina Nair','naina37@gmail.com','9876543246','hash37'),
+(38,'Simran Das','simran38@gmail.com','9876543247','hash38'),
+(39,'Alina Khan','alina39@gmail.com','9876543248','hash39'),
+(40,'Fatima Ali','fatima40@gmail.com','9876543249','hash40'),
+
+(41,'Rahul Verma','rahul41@gmail.com','9876543250','hash41'),
+(42,'Amit Kumar','amit42@gmail.com','9876543251','hash42'),
+(43,'Suresh Yadav','suresh43@gmail.com','9876543252','hash43'),
+(44,'Mukesh Singh','mukesh44@gmail.com','9876543253','hash44'),
+(45,'Ramesh Gupta','ramesh45@gmail.com','9876543254','hash45'),
+(46,'Deepak Sharma','deepak46@gmail.com','9876543255','hash46'),
+(47,'Sunil Mehta','sunil47@gmail.com','9876543256','hash47'),
+(48,'Anil Kapoor','anil48@gmail.com','9876543257','hash48'),
+(49,'Vikas Jain','vikas49@gmail.com','9876543258','hash49'),
+(50,'Rajesh Khanna','rajesh50@gmail.com','9876543259','hash50');
+
+-- data for property seeker
+INSERT INTO property_seeker 
+(userId, aadharNumber, budgetMin, budgetMax, preferredLocality, propertyTypePreference, bhkNeed) VALUES
+
+(1,'100000000001',1200000,3500000,'BELTOLA','apartment',2),
+(2,'100000000002',800000,2500000,'LAL GANESH','flat',2.5),
+(3,'100000000003',1500000,4000000,'DISPUR','villa',3),
+(4,'100000000004',1000000,3000000,'GANESHGURI','house',2),
+(5,'100000000005',2000000,5000000,'BORAGAON','apartment',3.5),
+
+(6,'100000000006',900000,2800000,'BELTOLA','flat',2),
+(7,'100000000007',1300000,3600000,'LAL GANESH','villa',3),
+(8,'100000000008',700000,2000000,'DISPUR','apartment',1.5),
+(9,'100000000009',1800000,4500000,'GANESHGURI','house',4),
+(10,'100000000010',1100000,3200000,'BORAGAON','flat',2.5),
+
+(11,'100000000011',950000,2700000,'BELTOLA','apartment',2),
+(12,'100000000012',1600000,4200000,'LAL GANESH','villa',3),
+(13,'100000000013',1200000,3500000,'DISPUR','flat',2.5),
+(14,'100000000014',1400000,3800000,'GANESHGURI','house',3),
+(15,'100000000015',2100000,5200000,'BORAGAON','apartment',4),
+
+(16,'100000000016',1000000,3000000,'BELTOLA','flat',2),
+(17,'100000000017',1700000,4300000,'LAL GANESH','villa',3.5),
+(18,'100000000018',800000,2400000,'DISPUR','apartment',2),
+(19,'100000000019',1900000,4700000,'GANESHGURI','house',4),
+(20,'100000000020',1150000,3300000,'BORAGAON','flat',2.5),
+
+(21,'100000000021',900000,2600000,'BELTOLA','apartment',2),
+(22,'100000000022',1500000,4000000,'LAL GANESH','villa',3),
+(23,'100000000023',1300000,3600000,'DISPUR','flat',2.5),
+(24,'100000000024',1750000,4500000,'GANESHGURI','house',4),
+(25,'100000000025',2200000,5500000,'BORAGAON','apartment',4.5),
+
+(26,'100000000026',850000,2300000,'BELTOLA','flat',2),
+(27,'100000000027',1400000,3900000,'LAL GANESH','villa',3),
+(28,'100000000028',750000,2100000,'DISPUR','apartment',1.5),
+(29,'100000000029',2000000,4800000,'GANESHGURI','house',4),
+(30,'100000000030',1200000,3400000,'BORAGAON','flat',2.5),
+
+(31,'100000000031',950000,2700000,'BELTOLA','apartment',2),
+(32,'100000000032',1600000,4200000,'LAL GANESH','villa',3),
+(33,'100000000033',1100000,3100000,'DISPUR','flat',2),
+(34,'100000000034',1800000,4600000,'GANESHGURI','house',4),
+(35,'100000000035',2100000,5300000,'BORAGAON','apartment',4.5);
+
+--data for seller
+INSERT INTO seller (userId, totalProperties, rating, verificationStatus) VALUES
+
+(1,5,4.5,TRUE),
+(2,2,3.8,TRUE),
+(3,0,NULL,FALSE),
+(4,7,4.2,TRUE),
+(5,3,3.5,TRUE),
+
+(6,1,2.8,FALSE),
+(7,4,4.0,TRUE),
+(8,0,NULL,FALSE),
+(9,6,4.7,TRUE),
+(10,2,3.2,TRUE),
+
+(11,3,3.9,TRUE),
+(12,5,4.3,TRUE),
+(13,1,2.5,FALSE),
+(14,0,NULL,FALSE),
+(15,8,4.8,TRUE),
+
+(16,2,3.6,TRUE),
+(17,4,4.1,TRUE),
+(18,0,NULL,FALSE),
+(19,6,4.4,TRUE),
+(20,3,3.7,TRUE),
+
+(21,1,2.9,FALSE),
+(22,5,4.6,TRUE),
+(23,2,3.3,TRUE),
+(24,0,NULL,FALSE),
+(25,7,4.9,TRUE);
+
+--data for agents
+INSERT INTO agent (userId, rating, experienceYears, salary, dealCount, rentCount) VALUES
+(1,4.5,5,50000,20,10),
+(2,3.8,3,40000,15,8),
+(3,4.2,7,65000,30,12),
+(4,3.5,2,30000,10,5),
+(5,4.8,10,90000,45,20),
+
+(6,3.9,4,45000,18,9),
+(7,4.1,6,60000,25,11),
+(8,3.2,1,25000,8,3),
+(9,4.6,9,85000,40,18),
+(10,3.7,3,42000,14,7),
+
+(11,4.3,8,70000,32,15),
+(12,4.0,5,52000,22,10),
+(13,3.4,2,28000,9,4),
+(14,4.7,11,95000,48,22),
+(15,4.9,12,100000,50,25);
+
+-- data for indseller
+INSERT INTO indSeller (userId, aadharNumber, panNumber) VALUES
+(1,'100000000001','ABCDE00001'),
+(2,'100000000002','ABCDE00002'),
+(3,'100000000003','ABCDE00003'),
+(4,'100000000004','ABCDE00004'),
+(5,'100000000005','ABCDE00005'),
+(6,'100000000006','ABCDE00006'),
+(7,'100000000007','ABCDE00007'),
+(8,'100000000008','ABCDE00008'),
+(9,'100000000009','ABCDE00009'),
+(10,'100000000010','ABCDE00010'),
+(11,'100000000011','ABCDE00011'),
+(12,'100000000012','ABCDE00012'),
+(13,'100000000013','ABCDE00013'),
+(14,'100000000014','ABCDE00014'),
+(15,'100000000015','ABCDE00015');
+
+--data for orgseller
+INSERT INTO orgSeller 
+(userId, organizationName, panNumber, registrationNumber, officeAddress, contactNumber, websiteUrl) VALUES
+
+(16,'EstateCorp16','ORG00016AA','REG162026','Office 16, Guwahati','9000000016','www.estate16.com'),
+(17,'EstateCorp17','ORG00017AA','REG172026','Office 17, Guwahati','9000000017','www.estate17.com'),
+(18,'EstateCorp18','ORG00018AA','REG182026','Office 18, Guwahati','9000000018','www.estate18.com'),
+(19,'EstateCorp19','ORG00019AA','REG192026','Office 19, Guwahati','9000000019','www.estate19.com'),
+(20,'EstateCorp20','ORG00020AA','REG202026','Office 20, Guwahati','9000000020','www.estate20.com'),
+
+(21,'EstateCorp21','ORG00021AA','REG212026','Office 21, Guwahati','9000000021','www.estate21.com'),
+(22,'EstateCorp22','ORG00022AA','REG222026','Office 22, Guwahati','9000000022','www.estate22.com'),
+(23,'EstateCorp23','ORG00023AA','REG232026','Office 23, Guwahati','9000000023','www.estate23.com'),
+(24,'EstateCorp24','ORG00024AA','REG242026','Office 24, Guwahati','9000000024','www.estate24.com'),
+(25,'EstateCorp25','ORG00025AA','REG252026','Office 25, Guwahati','9000000025','www.estate25.com');
+
+--transactions
+INSERT INTO transactions 
+(transactionId, tansactionDate, transactionAmount, transactionType, propertyId, sellerId, seekerId, agentId) VALUES
+
+(1,'2023-06-15',4500000,'sale',0,1,1,1),
+(2,'2023-06-15',7879000,'sale',1,2,2,2),
+(3,'2023-06-15',3150000,'sale',2,3,3,3),
+(4,'2023-06-15',5000000,'sale',3,4,4,4),
+(5,'2023-06-15',6520000,'sale',4,5,5,5),
+
+(6,'2023-06-15',4500000,'rent',5,6,6,6),
+(7,'2023-06-15',3000000,'rent',6,7,7,7),
+(8,'2023-06-15',5200000,'sale',7,8,8,8),
+(9,'2023-06-15',4100000,'sale',8,9,9,9),
+(10,'2023-06-15',2800000,'rent',9,10,10,10),
+
+(11,'2023-06-15',3600000,'sale',10,11,11,11),
+(12,'2023-06-15',2700000,'rent',11,12,12,12),
+(13,'2023-06-15',4900000,'sale',12,13,13,13),
+(14,'2023-06-15',3100000,'rent',13,14,14,14),
+(15,'2023-06-15',5500000,'sale',14,15,15,15),
+
+(16,'2023-06-15',2600000,'rent',15,16,16,1),
+(17,'2023-06-15',4700000,'sale',16,17,17,2),
+(18,'2023-06-15',2900000,'rent',17,18,18,3),
+(19,'2023-06-15',6000000,'sale',18,19,19,4),
+(20,'2023-06-15',3200000,'rent',19,20,20,5),
+
+(21,'2023-06-15',5100000,'sale',20,21,21,6),
+(22,'2023-06-15',2800000,'rent',21,22,22,7),
+(23,'2023-06-15',4300000,'sale',22,23,23,8),
+(24,'2023-06-15',3000000,'rent',23,24,24,9),
+(25,'2023-06-15',6200000,'sale',24,25,25,10),
+
+(26,'2023-06-15',2700000,'rent',25,1,26,11),
+(27,'2023-06-15',4800000,'sale',26,2,27,12),
+(28,'2023-06-15',3100000,'rent',27,3,28,13),
+(29,'2023-06-15',5400000,'sale',28,4,29,14),
+(30,'2023-06-15',3500000,'rent',29,5,30,15);
