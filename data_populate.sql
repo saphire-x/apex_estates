@@ -1,3 +1,4 @@
+-- Active: 1774686488487@@127.0.0.1@3306@apex_estates
 -- Add all the datapopulation queries in this table
 INSERT INTO property (property_id,agentID,sellerID,title,property_type,listing_type,price,area_sqft,bhk,house_no,house_name,locality_name,city,pincode,status,listed_on,updated_on,year_built) VALUES
 ('1',NULL,'34','3 BHK Apartment in LAL GANESH','duplex','sale','7879000','1751.0','3.0','124','Blue Nest','LAL GANESH','Guwahati','781863','available','2023-06-03','2024-01-25','2014'),
