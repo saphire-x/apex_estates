@@ -160,7 +160,7 @@ INSERT INTO users (userId, name, email, phoneNumber, passwordHash) VALUES
 (47,'Sunil Mehta','sunil47@gmail.com','9876543256','hash47'),
 (48,'Anil Kapoor','anil48@gmail.com','9876543257','hash48'),
 (49,'Vikas Jain','vikas49@gmail.com','9876543258','hash49'),
-(50,'Rajesh Khanna','rajesh50@gmail.com','9876543259','hash50');
+(50,'Rajesh Khanna','rajesh50@gmail.com','9876543259','hash50'),
 (51,'Arjun Patel','arjun51@gmail.com','9876543260','hash51'),
 (52,'Rohit Sharma','rohit52@gmail.com','9876543261','hash52'),
 (53,'Karan Malhotra','karan53@gmail.com','9876543262','hash53'),
@@ -181,10 +181,10 @@ INSERT INTO users (userId, name, email, phoneNumber, passwordHash) VALUES
 (68,'Abhishek Nair','abhishek68@gmail.com','9876543277','hash68'),
 (69,'GreenField Estates','www.greenfieldestates.com','9000000069','hash69'),
 (70,'Skyline Realty','www.skylinerealty.com','9000000070','hash70'),
-(71,'NorthEast Property Hub','www.nepropertyhub.com','9000000071','hash71')
+(71,'NorthEast Property Hub','www.nepropertyhub.com','9000000071','hash71'),
 (72,'UrbanNest Developers','www.urbannestdev.com','9000000072','hash72'),
 (73,'PrimeSpace Infrastructure','www.primespaceinfra.com','9000000073','hash73'),
-(74,'Assam Realty Group','www.assamrealtygroup.com','9000000074','hash74')
+(74,'Assam Realty Group','www.assamrealtygroup.com','9000000074','hash74'),
 (75,'BlueBrick Constructions','www.bluebrickconstructions.com','9000000075','hash75');
 
 -- data for property seeker
@@ -324,41 +324,40 @@ INSERT INTO orgSeller
 (75,'BlueBrick Constructions','ORG00075AA','REG752026','Office 20, Guwahati','9000000075','www.bluebrickconstructions.com');
 
 --transactions
+-- add tuple into transaction table
 INSERT INTO transactions 
-(transactionId, tansactionDate, transactionAmount, transactionType, propertyId, sellerId, seekerId, agentId) VALUES
+(transactionId, transactionDate, transactionAmount, transactionType, propertyId, sellerId, seekerId, agentId) 
+VALUES
+-- Sold properties (listing_type = sale)
+(1,  '2023-11-10', 6300000, 'sale', 4,  46, 9,  39),
+(2,  '2023-07-15', 6200000, 'sale', 8,  49, 14, 45),
+(3,  '2023-12-05', 4450000, 'sale', 16, 52, 3,  41),
+(4,  '2023-05-28', 3500000, 'sale', 17, 57, 22, 37),
+(5,  '2023-08-20', 3300000, 'sale', 23, 60, 5,  43),
+(6,  '2024-01-10', 9500000, 'sale', 29, 59, 24, 43),
+(7,  '2023-12-25', 6300000, 'sale', 35, 62, 7,  37),
+(8,  '2023-12-15', 4350000, 'sale', 44, 49, 33, 43),
+(9,  '2023-05-18', 4100000, 'sale', 53, 57, 27, 37),
+(10, '2023-07-20', 6700000, 'sale', 58, 65, 16, 45),
+(11, '2023-08-05', 6600000, 'sale', 65, 54, 21, 41),
+(12, '2023-09-12', 5500000, 'sale', 78, 59, 34, 37),
+(13, '2023-07-30', 2100000, 'sale', 80, 62, 1,  39),
+(14, '2023-03-20', 5100000, 'sale', 81, 67, 15, 45),
+(15, '2023-10-10', 7700000, 'sale', 82, 46, 6,  43),
+(16, '2023-08-22', 3350000, 'sale', 83, 49, 29, 41),
+(17, '2023-12-18', 4600000, 'sale', 84, 52, 13, 37),
+(18, '2023-08-28', 6500000, 'sale', 88, 57, 30, 39),
 
-(1,'2023-06-15',4500000,'sale',0,1,1,1),
-(2,'2023-06-15',7879000,'sale',1,2,2,2),
-(3,'2023-06-15',3150000,'sale',2,3,3,3),
-(4,'2023-06-15',5000000,'sale',3,4,4,4),
-(5,'2023-06-15',6520000,'sale',4,5,5,5),
-
-(6,'2023-06-15',4500000,'rent',5,6,6,6),
-(7,'2023-06-15',3000000,'rent',6,7,7,7),
-(8,'2023-06-15',5200000,'sale',7,8,8,8),
-(9,'2023-06-15',4100000,'sale',8,9,9,9),
-(10,'2023-06-15',2800000,'rent',9,10,10,10),
-
-(11,'2023-06-15',3600000,'sale',10,11,11,11),
-(12,'2023-06-15',2700000,'rent',11,12,12,12),
-(13,'2023-06-15',4900000,'sale',12,13,13,13),
-(14,'2023-06-15',3100000,'rent',13,14,14,14),
-(15,'2023-06-15',5500000,'sale',14,15,15,15),
-
-(16,'2023-06-15',2600000,'rent',15,16,16,1),
-(17,'2023-06-15',4700000,'sale',16,17,17,2),
-(18,'2023-06-15',2900000,'rent',17,18,18,3),
-(19,'2023-06-15',6000000,'sale',18,19,19,4),
-(20,'2023-06-15',3200000,'rent',19,20,20,5),
-
-(21,'2023-06-15',5100000,'sale',20,21,21,6),
-(22,'2023-06-15',2800000,'rent',21,22,22,7),
-(23,'2023-06-15',4300000,'sale',22,23,23,8),
-(24,'2023-06-15',3000000,'rent',23,24,24,9),
-(25,'2023-06-15',6200000,'sale',24,25,25,10),
-
-(26,'2023-06-15',2700000,'rent',25,1,26,11),
-(27,'2023-06-15',4800000,'sale',26,2,27,12),
-(28,'2023-06-15',3100000,'rent',27,3,28,13),
-(29,'2023-06-15',5400000,'sale',28,4,29,14),
-(30,'2023-06-15',3500000,'rent',29,5,30,15);
+-- Rented properties (listing_type = rent)
+(19, '2023-10-10', 4200000, 'rent', 25, 46, 28, 39),
+(20, '2023-11-20', 6200000, 'rent', 26, 54, 12, 45),
+(21, '2023-10-28', 7750000, 'rent', 28, 67, 31, 41),
+(22, '2023-04-20', 6200000, 'rent', 36, 65, 19, 39),
+(23, '2023-06-25', 9100000, 'rent', 37, 46, 2,  45),
+(24, '2023-07-30', 6300000, 'rent', 57, 60, 4,  39),
+(25, '2023-06-15', 7900000, 'rent', 63, 46, 8,  43),
+(26, '2023-07-08', 3600000, 'rent', 50, 52, 10, 41),
+(27, '2023-07-15', 3100000, 'rent', 99, 60, 17, 45),
+(28, '2023-04-25', 6200000, 'rent', 6,  65, 20, 43),
+(29, '2023-05-30', 3900000, 'rent', 7,  46, 11, 41),
+(30, '2023-09-18', 3700000, 'rent', 70, 54, 32, 37);
