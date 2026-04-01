@@ -1,4 +1,6 @@
 USE apex_estates;
+
+select * from agent;
 CREATE TABLE users(
 	userId INT PRIMARY KEY AUTO_INCREMENT,
 	name VARCHAR(50) NOT NULL,
@@ -152,4 +154,48 @@ END$$
 
 DELIMITER ;
 
--- for updating the updated_on attribute in the properties 
+-- for updating total properties count for the seller if propert added
+
+DELIMITER$$
+
+CREATE TRIGGER newPropertyAddedInSeller
+AFTER INSERT ON property
+FOR EACH ROW
+BEGIN
+	UPDATE seller
+	SET totalProperties= totalProperties+1
+	WHERE userId=NEW.sellerID;
+END$$
+DELIMITER ;
+
+-- for updating total properties count for the seller if property is deleted
+
+DELIMITER $$
+
+CREATE TRIGGER propertyDeletedInSeller
+AFTER DELETE ON property
+FOR EACH ROW
+BEGIN
+	UPDATE seller
+	SET totalProperties = totalProperties-1;
+	WHERE userId = OLD.sellerID;
+END$$
+DELIMITER ;
+
+
+-- if the agent id becomes null in the properties table then for auto assigning the agent to the 
+-- property with least number of deals and rents
+
+DELIMITER $$
+CREATE TRIGGER addAgent
+BEFORE INSERT ON property
+FOR EACH ROW 
+BEGIN
+	IF NEW.agentId is NULL THEN
+		SELECT userId INTO NEW.agentId
+		FROM agent
+		ORDER BY (dealCount+rentCount) ASC
+		LIMIT 1;
+	END IF;
+END$$
+DELIMITER ;
