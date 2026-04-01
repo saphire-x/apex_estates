@@ -1,6 +1,5 @@
 -- Add all the datapopulation queries in this table
 INSERT INTO property (property_id,agentID,sellerID,title,property_type,listing_type,price,area_sqft,bhk,house_no,house_name,locality_name,city,pincode,status,listed_on,updated_on,year_built) VALUES
-('0',NULL,'34','3 BHK Apartment in CHRISTIAN BASTI','mansion','rent','4500000','1500.0','3.0','115','Green Villa','CHRISTIAN BASTI','Guwahati','781661','sold','2023-04-14','2024-06-30','2022'),
 ('1',NULL,'34','3 BHK Apartment in LAL GANESH','duplex','sale','7879000','1751.0','3.0','124','Blue Nest','LAL GANESH','Guwahati','781863','available','2023-06-03','2024-01-25','2014'),
 ('2',NULL,'17','2 BHK Apartment in BORAGAON','apartment','sale','3150000','750.0','2.0','83','Silver Heights','BORAGAON','Guwahati','781474','available','2023-01-06','2024-04-03','2021'),
 ('3',NULL,'12','2 BHK Apartment in BAGHARBARI','duplex','rent','5000000','1100.0','2.0','30','Silver Heights','BAGHARBARI','Guwahati','781574','rented','2023-04-08','2023-11-28','2006'),
@@ -100,29 +99,11 @@ INSERT INTO property (property_id,agentID,sellerID,title,property_type,listing_t
 ('97',NULL,'48','3 BHK Apartment in ZOO TINIALI','bungalow','rent','7900000','1565.0','3.0','101','Silver Heights','ZOO TINIALI','Guwahati','781937','rented','2023-01-29','2023-12-31','2015'),
 ('98',NULL,'18','3 BHK Apartment in SARUSAJAI','flat','sale','5700000','1446.0','3.0','6','Sun Residency','SARUSAJAI','Guwahati','781827','rented','2023-02-24','2024-06-12','2018'),
 ('99',NULL,'18','1 BHK Apartment in BELTOLA','flat','rent','3200000','790.0','1.0','116','Blue Nest','BELTOLA','Guwahati','781681','sold','2023-05-26','2023-11-06','2023'),
-('100',NULL,'47','2 BHK Apartment in BHETAPARA','duplex','rent','7476000','1246.0','2.0','67','Silver Heights','BHETAPARA','Guwahati','781017','rented','2023-04-19','2023-12-09','2016'),
-('101',NULL,'5','3 BHK Apartment in BHETAPARA','triplex','sale','8904000','1590.0','3.0','106','Blue Nest','BHETAPARA','Guwahati','781703','sold','2023-07-30','2023-12-02','2020'),
-('102',NULL,'5','3 BHK Apartment in NOONMATI','duplex','rent','7900000','1550.0','3.0','22','Silver Heights','NOONMATI','Guwahati','781765','rented','2023-01-19','2024-04-25','2008'),
-('103',NULL,'35','3 BHK Apartment in CHANDMARI','duplex','sale','6984999','1117.0','3.0','9','Green Villa','CHANDMARI','Guwahati','781010','rented','2023-07-31','2024-01-29','2009'),
-('104',NULL,'47','3 BHK Apartment in ZOO TINIALI','flat','sale','5658000','981.0','3.0','28','Sun Residency','ZOO TINIALI','Guwahati','781401','available','2023-06-22','2024-08-07','2010'),
-('105',NULL,'7','2 BHK Apartment in HATIGAON','mansion','sale','5000000','1280.0','2.0','134','Blue Nest','HATIGAON','Guwahati','781525','rented','2023-01-11','2024-08-15','2014'),
-('106',NULL,'38','1 BHK Apartment in SIX MILE','bungalow','rent','3250000','660.0','1.0','112','Sun Residency','SIX MILE','Guwahati','781198','sold','2023-02-22','2023-12-07','2022'),
-('107',NULL,'31','4 BHK Apartment in SIX MILE','flat','rent','33000000','4300.0','4.0','84','Blue Nest','SIX MILE','Guwahati','781827','sold','2023-03-16','2024-02-01','2024'),
-('108',NULL,'30','4 BHK Apartment in SIX MILE','duplex','sale','10500000','1778.0','4.0','71','Sun Residency','SIX MILE','Guwahati','781528','available','2023-04-11','2024-05-28','2000'),
-('109',NULL,'29','1 BHK Apartment in SIX MILE','villa','sale','2800000','800.0','1.0','53','Silver Heights','SIX MILE','Guwahati','781832','available','2023-09-06','2023-11-19','2010'),
-('110',NULL,'17','3 BHK Apartment in HATIGAON','flat','sale','7500000','1581.0','3.0','65','Sun Residency','HATIGAON','Guwahati','781846','available','2023-05-31','2024-03-19','2016'),
-('111',NULL,'14','3 BHK Apartment in LOKHRA','apartment','rent','5248000','1312.0','3.0','82','Blue Nest','LOKHRA','Guwahati','781491','available','2023-09-30','2024-07-22','2008'),
-('112',NULL,'49','2 BHK Apartment in LAL GANESH','duplex','rent','6300000','1266.0','2.0','30','Green Villa','LAL GANESH','Guwahati','781396','sold','2023-05-07','2023-12-10','2010'),
-('113',NULL,'39','3 BHK Apartment in SIX MILE','flat','sale','8500000','1400.0','3.0','76','Sun Residency','SIX MILE','Guwahati','781820','available','2023-02-02','2024-02-19','2016'),
-('114',NULL,'9','2 BHK Apartment in SIX MILE','flat','sale','4500000','1000.0','2.0','122','Sun Residency','SIX MILE','Guwahati','781113','sold','2023-02-23','2023-11-08','2017'),
-('115',NULL,'13','3 BHK Apartment in LAL GANESH','bungalow','sale','7100000','1490.0','3.0','77','Sun Residency','LAL GANESH','Guwahati','781462','available','2023-07-05','2024-08-09','2006'),
-('116',NULL,'16','3 BHK Apartment in LALMATI','mansion','sale','8500000','1300.0','3.0','5','Blue Nest','LALMATI','Guwahati','781814','rented','2023-10-23','2024-06-22','2023'),
-('117',NULL,'47','2 BHK Apartment in CHANDMARI','triplex','sale','5500000','1200.0','2.0','3','Blue Nest','CHANDMARI','Guwahati','781854','sold','2023-09-24','2024-07-31','2001'),
-('118',NULL,'11','2 BHK Apartment in CHRISTIAN BASTI','flat','sale','6500000','1000.0','2.0','107','Blue Nest','CHRISTIAN BASTI','Guwahati','781544','sold','2023-04-12','2024-02-04','2017'),
-('119',NULL,'44','3 BHK Apartment in GHORAMARA','villa','rent','6500000','1500.0','3.0','66','Green Villa','GHORAMARA','Guwahati','781985','available','2023-03-04','2024-03-18','2017');
+('100',NULL,'47','2 BHK Apartment in BHETAPARA','duplex','rent','7476000','1246.0','2.0','67','Silver Heights','BHETAPARA','Guwahati','781017','rented','2023-04-19','2023-12-09','2016');
 
 -- Data for users
 INSERT INTO users (userId, name, email, phoneNumber, passwordHash) VALUES
+-----property seeker(1-35)
 (1,'Aarav Sharma','aarav1@gmail.com','9876543210','hash1'),
 (2,'Vivaan Singh','vivaan2@gmail.com','9876543211','hash2'),
 (3,'Aditya Kumar','aditya3@gmail.com','9876543212','hash3'),
@@ -161,6 +142,7 @@ INSERT INTO users (userId, name, email, phoneNumber, passwordHash) VALUES
 (33,'Sneha Gupta','sneha33@gmail.com','9876543242','hash33'),
 (34,'Kavya Patel','kavya34@gmail.com','9876543243','hash34'),
 (35,'Meera Mehta','meera35@gmail.com','9876543244','hash35'),
+------agents(36-45)
 (36,'Aisha Iyer','aisha36@gmail.com','9876543245','hash36'),
 (37,'Naina Nair','naina37@gmail.com','9876543246','hash37'),
 (38,'Simran Das','simran38@gmail.com','9876543247','hash38'),
@@ -172,11 +154,37 @@ INSERT INTO users (userId, name, email, phoneNumber, passwordHash) VALUES
 (43,'Suresh Yadav','suresh43@gmail.com','9876543252','hash43'),
 (44,'Mukesh Singh','mukesh44@gmail.com','9876543253','hash44'),
 (45,'Ramesh Gupta','ramesh45@gmail.com','9876543254','hash45'),
+-----sellers
 (46,'Deepak Sharma','deepak46@gmail.com','9876543255','hash46'),
 (47,'Sunil Mehta','sunil47@gmail.com','9876543256','hash47'),
 (48,'Anil Kapoor','anil48@gmail.com','9876543257','hash48'),
 (49,'Vikas Jain','vikas49@gmail.com','9876543258','hash49'),
 (50,'Rajesh Khanna','rajesh50@gmail.com','9876543259','hash50');
+(51,'Arjun Patel','arjun51@gmail.com','9876543260','hash51'),
+(52,'Rohit Sharma','rohit52@gmail.com','9876543261','hash52'),
+(53,'Karan Malhotra','karan53@gmail.com','9876543262','hash53'),
+(54,'Manoj Tiwari','manoj54@gmail.com','9876543263','hash54'),
+(55,'Nitin Agarwal','nitin55@gmail.com','9876543264','hash55'),
+(56,'Pankaj Mishra','pankaj56@gmail.com','9876543265','hash56'),
+(57,'Ajay Saxena','ajay57@gmail.com','9876543266','hash57'),
+(58,'Vivek Pandey','vivek58@gmail.com','9876543267','hash58'),
+(59,'Sanjay Dubey','sanjay59@gmail.com','9876543268','hash59'),
+(60,'Ravi Shukla','ravi60@gmail.com','9876543269','hash60'),
+(61,'Tarun Joshi','tarun61@gmail.com','9876543270','hash61'),
+(62,'Mohit Bansal','mohit62@gmail.com','9876543271','hash62'),
+(63,'Gaurav Arora','gaurav63@gmail.com','9876543272','hash63'),
+(64,'Yash Thakur','yash64@gmail.com','9876543273','hash64'),
+(65,'Harsh Vardhan','harsh65@gmail.com','9876543274','hash65'),
+(66,'Kunal Sinha','kunal66@gmail.com','9876543275','hash66'),
+(67,'Siddharth Roy','siddharth67@gmail.com','9876543276','hash67'),
+(68,'Abhishek Nair','abhishek68@gmail.com','9876543277','hash68'),
+(69,'GreenField Estates','www.greenfieldestates.com','9000000069','hash69'),
+(70,'Skyline Realty','www.skylinerealty.com','9000000070','hash70'),
+(71,'NorthEast Property Hub','www.nepropertyhub.com','9000000071','hash71')
+(72,'UrbanNest Developers','www.urbannestdev.com','9000000072','hash72'),
+(73,'PrimeSpace Infrastructure','www.primespaceinfra.com','9000000073','hash73'),
+(74,'Assam Realty Group','www.assamrealtygroup.com','9000000074','hash74')
+(75,'BlueBrick Constructions','www.bluebrickconstructions.com','9000000075','hash75');
 
 -- data for property seeker
 INSERT INTO property_seeker 
@@ -224,92 +232,95 @@ INSERT INTO property_seeker
 (34,'100000000034',1800000,4600000,'GANESHGURI','house',4),
 (35,'100000000035',2100000,5300000,'BORAGAON','apartment',4.5);
 
---data for seller
-INSERT INTO seller (userId, totalProperties, rating, verificationStatus) VALUES
-
-(1,5,4.5,TRUE),
-(2,2,3.8,TRUE),
-(3,0,NULL,FALSE),
-(4,7,4.2,TRUE),
-(5,3,3.5,TRUE),
-
-(6,1,2.8,FALSE),
-(7,4,4.0,TRUE),
-(8,0,NULL,FALSE),
-(9,6,4.7,TRUE),
-(10,2,3.2,TRUE),
-
-(11,3,3.9,TRUE),
-(12,5,4.3,TRUE),
-(13,1,2.5,FALSE),
-(14,0,NULL,FALSE),
-(15,8,4.8,TRUE),
-
-(16,2,3.6,TRUE),
-(17,4,4.1,TRUE),
-(18,0,NULL,FALSE),
-(19,6,4.4,TRUE),
-(20,3,3.7,TRUE),
-
-(21,1,2.9,FALSE),
-(22,5,4.6,TRUE),
-(23,2,3.3,TRUE),
-(24,0,NULL,FALSE),
-(25,7,4.9,TRUE);
 
 --data for agents
 INSERT INTO agent (userId, rating, experienceYears, salary, dealCount, rentCount) VALUES
-(1,4.5,5,50000,20,10),
-(2,3.8,3,40000,15,8),
-(3,4.2,7,65000,30,12),
-(4,3.5,2,30000,10,5),
-(5,4.8,10,90000,45,20),
+(36,3.9,4,45000,18,9),
+(37,4.1,6,60000,25,11),
+(38,3.2,1,25000,8,3),
+(39,4.6,9,85000,40,18),
+(40,3.7,3,42000,14,7),
+(41,4.5,5,50000,20,10),
+(42,3.8,3,40000,15,8),
+(43,4.2,7,65000,30,12),
+(44,3.5,2,30000,10,5),
+(45,4.8,10,90000,45,20);
 
-(6,3.9,4,45000,18,9),
-(7,4.1,6,60000,25,11),
-(8,3.2,1,25000,8,3),
-(9,4.6,9,85000,40,18),
-(10,3.7,3,42000,14,7),
+--data for seller
+INSERT INTO seller (userId, totalProperties, rating, verificationStatus) VALUES
 
-(11,4.3,8,70000,32,15),
-(12,4.0,5,52000,22,10),
-(13,3.4,2,28000,9,4),
-(14,4.7,11,95000,48,22),
-(15,4.9,12,100000,50,25);
+(46,5,4.5,TRUE),
+(47,2,3.8,TRUE),
+(48,0,NULL,FALSE),
+(49,7,4.2,TRUE),
+(50,3,3.5,TRUE),
+
+(51,1,2.8,FALSE),
+(52,4,4.0,TRUE),
+(53,0,NULL,FALSE),
+(54,6,4.7,TRUE),
+(55,2,3.2,TRUE),
+
+(56,2,3.6,TRUE),
+(57,4,4.1,TRUE),
+(58,0,NULL,FALSE),
+(59,6,4.4,TRUE),
+(60,3,3.7,TRUE),
+
+(61,1,2.9,FALSE),
+(62,5,4.6,TRUE),
+(63,2,3.3,TRUE),
+(64,0,NULL,FALSE),
+(65,7,4.9,TRUE)
+
+(66,1,3.6,TRUE),
+(67,3,4.1,TRUE),
+(68,0,NULL,FALSE),
+(69,3,4.4,TRUE),
+(70,2,3.7,TRUE)
+
+(71,3,3.9,TRUE),
+(72,5,4.3,TRUE),
+(73,1,2.5,FALSE),
+(74,0,NULL,FALSE),
+(75,8,4.8,TRUE);
 
 -- data for indseller
 INSERT INTO indSeller (userId, aadharNumber, panNumber) VALUES
-(1,'100000000001','ABCDE00001'),
-(2,'100000000002','ABCDE00002'),
-(3,'100000000003','ABCDE00003'),
-(4,'100000000004','ABCDE00004'),
-(5,'100000000005','ABCDE00005'),
-(6,'100000000006','ABCDE00006'),
-(7,'100000000007','ABCDE00007'),
-(8,'100000000008','ABCDE00008'),
-(9,'100000000009','ABCDE00009'),
-(10,'100000000010','ABCDE00010'),
-(11,'100000000011','ABCDE00011'),
-(12,'100000000012','ABCDE00012'),
-(13,'100000000013','ABCDE00013'),
-(14,'100000000014','ABCDE00014'),
-(15,'100000000015','ABCDE00015');
+(46,'100000000046','ABCDE00046'),
+(47,'100000000047','ABCDE00047'),
+(48,'100000000048','ABCDE00048'),
+(49,'100000000049','ABCDE00049'),
+(50,'100000000050','ABCDE00050'),
+(51,'100000000051','ABCDE00051'),
+(52,'100000000052','ABCDE00052'),
+(53,'100000000053','ABCDE00053'),
+(54,'100000000054','ABCDE00054'),
+(55,'100000000055','ABCDE00055'),
+(56,'100000000056','ABCDE00056'),
+(57,'100000000057','ABCDE00057'),
+(58,'100000000058','ABCDE00058'),
+(59,'100000000059','ABCDE00059'),
+(60,'100000000060','ABCDE00060'),
+(61,'100000000061','ABCDE00061'),
+(62,'100000000062','ABCDE00062'),
+(63,'100000000063','ABCDE00063'),
+(64,'100000000064','ABCDE00064'),
+(65,'100000000065','ABCDE00065'),
+(66,'100000000066','ABCDE00066'),
+(67,'100000000067','ABCDE00067'),
+(68,'100000000068','ABCDE00068');
 
 --data for orgseller
 INSERT INTO orgSeller 
 (userId, organizationName, panNumber, registrationNumber, officeAddress, contactNumber, websiteUrl) VALUES
-
-(16,'EstateCorp16','ORG00016AA','REG162026','Office 16, Guwahati','9000000016','www.estate16.com'),
-(17,'EstateCorp17','ORG00017AA','REG172026','Office 17, Guwahati','9000000017','www.estate17.com'),
-(18,'EstateCorp18','ORG00018AA','REG182026','Office 18, Guwahati','9000000018','www.estate18.com'),
-(19,'EstateCorp19','ORG00019AA','REG192026','Office 19, Guwahati','9000000019','www.estate19.com'),
-(20,'EstateCorp20','ORG00020AA','REG202026','Office 20, Guwahati','9000000020','www.estate20.com'),
-
-(21,'EstateCorp21','ORG00021AA','REG212026','Office 21, Guwahati','9000000021','www.estate21.com'),
-(22,'EstateCorp22','ORG00022AA','REG222026','Office 22, Guwahati','9000000022','www.estate22.com'),
-(23,'EstateCorp23','ORG00023AA','REG232026','Office 23, Guwahati','9000000023','www.estate23.com'),
-(24,'EstateCorp24','ORG00024AA','REG242026','Office 24, Guwahati','9000000024','www.estate24.com'),
-(25,'EstateCorp25','ORG00025AA','REG252026','Office 25, Guwahati','9000000025','www.estate25.com');
+(69,'GreenField Estates Pvt Ltd','ORG00069AA','REG692026','Office 24, Guwahati','9000000069','www.greenfieldestates.com'),
+(70,'Skyline Realty Solutions','ORG00070AA','REG702026','Office 25, Guwahati','9000000070','www.skylinerealty.com'),
+(71,'NorthEast Property Hub','ORG00071AA','REG712026','Office 16, Guwahati','9000000071','www.nepropertyhub.com'),
+(72,'UrbanNest Developers','ORG00072AA','REG722026','Office 17, Guwahati','9000000072','www.urbannestdev.com'),
+(73,'PrimeSpace Infrastructure','ORG00073AA','REG732026','Office 18, Guwahati','9000000073','www.primespaceinfra.com'),
+(74,'Assam Realty Group','ORG00074AA','REG742026','Office 19, Guwahati','9000000074','www.assamrealtygroup.com'),
+(75,'BlueBrick Constructions','ORG00075AA','REG752026','Office 20, Guwahati','9000000075','www.bluebrickconstructions.com');
 
 --transactions
 INSERT INTO transactions 
