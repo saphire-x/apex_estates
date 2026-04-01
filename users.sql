@@ -1,5 +1,5 @@
 INSERT INTO users (userId, name, email, phoneNumber, passwordHash) VALUES
------property seeker(1-35)
+-- property seeker(1-35)
 (1,'Aarav Sharma','aarav1@gmail.com','9876543210','hash1'),
 (2,'Vivaan Singh','vivaan2@gmail.com','9876543211','hash2'),
 (3,'Aditya Kumar','aditya3@gmail.com','9876543212','hash3'),
@@ -38,7 +38,7 @@ INSERT INTO users (userId, name, email, phoneNumber, passwordHash) VALUES
 (33,'Sneha Gupta','sneha33@gmail.com','9876543242','hash33'),
 (34,'Kavya Patel','kavya34@gmail.com','9876543243','hash34'),
 (35,'Meera Mehta','meera35@gmail.com','9876543244','hash35'),
-------agents(36-45)
+-- agents(36-45)
 (36,'Aisha Iyer','aisha36@gmail.com','9876543245','hash36'),
 (37,'Naina Nair','naina37@gmail.com','9876543246','hash37'),
 (38,'Simran Das','simran38@gmail.com','9876543247','hash38'),
@@ -50,7 +50,7 @@ INSERT INTO users (userId, name, email, phoneNumber, passwordHash) VALUES
 (43,'Suresh Yadav','suresh43@gmail.com','9876543252','hash43'),
 (44,'Mukesh Singh','mukesh44@gmail.com','9876543253','hash44'),
 (45,'Ramesh Gupta','ramesh45@gmail.com','9876543254','hash45'),
------sellers
+-- sellers
 (46,'Deepak Sharma','deepak46@gmail.com','9876543255','hash46'),
 (47,'Sunil Mehta','sunil47@gmail.com','9876543256','hash47'),
 (48,'Anil Kapoor','anil48@gmail.com','9876543257','hash48'),
@@ -74,10 +74,10 @@ INSERT INTO users (userId, name, email, phoneNumber, passwordHash) VALUES
 (66,'Kunal Sinha','kunal66@gmail.com','9876543275','hash66'),
 (67,'Siddharth Roy','siddharth67@gmail.com','9876543276','hash67'),
 (68,'Abhishek Nair','abhishek68@gmail.com','9876543277','hash68'),
-(69,'GreenField Estates','www.greenfieldestates.com','9000000069','hash69'),
-(70,'Skyline Realty','www.skylinerealty.com','9000000070','hash70'),
-(71,'NorthEast Property Hub','www.nepropertyhub.com','9000000071','hash71'),
-(72,'UrbanNest Developers','www.urbannestdev.com','9000000072','hash72'),
-(73,'PrimeSpace Infrastructure','www.primespaceinfra.com','9000000073','hash73'),
-(74,'Assam Realty Group','www.assamrealtygroup.com','9000000074','hash74'),
-(75,'BlueBrick Constructions','www.bluebrickconstructions.com','9000000075','hash75');
+(69,'GreenField Estates','greenfielde@states.com','9000000069','hash69'),
+(70,'Skyline Realty','skyline@realty.com','9000000070','hash70'),
+(71,'NorthEast Property Hub','neproperty@hub.com','9000000071','hash71'),
+(72,'UrbanNest Developers','urbannest@dev.com','9000000072','hash72'),
+(73,'PrimeSpace Infrastructure','primespaceinfra@infra.com','9000000073','hash73'),
+(74,'Assam Realty Group','assamrealtygroup@group.com','9000000074','hash74'),
+(75,'BlueBrick Constructions','bluebrickconstructions@constructions.com','9000000075','hash75');
