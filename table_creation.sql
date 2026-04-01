@@ -257,3 +257,24 @@ BEGIN
 END$$
 
 DELIMITER ;
+
+--trigger for checking that the seller is not transacting with himself/herself
+DELIMITER $$
+
+CREATE TRIGGER preventSelfTransaction
+BEFORE INSERT ON transactions
+FOR EACH ROW
+BEGIN
+    DECLARE ownerId INT;
+
+    SELECT sellerID INTO ownerId
+    FROM property
+    WHERE property_id = NEW.propertyId;
+
+    IF ownerId = NEW.seekerId THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Seller cannot buy/rent their own property';
+    END IF;
+END$$
+
+DELIMITER ;
