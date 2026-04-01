@@ -2,6 +2,10 @@
 USE apex_estates;
 
 select * from agent;
+
+ALTER TABLE property
+MODIFY listed_on DATE;
+
 alter TABLE users
 MODIFY passwordHash VARCHAR(64) NOT NULL;	
 CREATE TABLE users(
