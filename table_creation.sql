@@ -1,12 +1,14 @@
 USE apex_estates;
 
 select * from agent;
+alter TABLE users
+MODIFY passwordHash VARCHAR(64) NOT NULL;	
 CREATE TABLE users(
 	userId INT PRIMARY KEY AUTO_INCREMENT,
 	name VARCHAR(50) NOT NULL,
 	email VARCHAR(64) NOT NULL UNIQUE,
 	phoneNumber CHAR(10) UNIQUE,
-	passwordHash VARCHAR(255) NOT NULL,
+	passwordHash VARCHAR(64) NOT NULL,
 	CHECK(name<>''),
 	CHECK(email LIKE '%@%.%'),
 	CHECK(phoneNumber IS NULL OR (phoneNumber>=1000000000 AND phoneNumber<=9999999999))
@@ -198,4 +200,38 @@ BEGIN
 		LIMIT 1;
 	END IF;
 END$$
+DELIMITER ;
+
+-- trigger for incresing the rating of the agent for successful transaction
+-- DELIMITER $$
+-- CREATE TRIGGER rating_increment
+-- BEFORE UPDATE ON transactions
+-- FOR EACH ROW
+-- BEGIN
+
+
+-- trigger for checking if the property is already sold or rented before inserting into transactions
+DELIMITER $$
+
+CREATE TRIGGER checkPropertyAvailability
+BEFORE INSERT ON transactions
+FOR EACH ROW
+BEGIN
+    DECLARE currentStatus VARCHAR(20);
+
+    SELECT status INTO currentStatus
+    FROM property
+    WHERE property_id = NEW.propertyId;
+
+    IF currentStatus IS NULL THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Property does not exist';
+
+    ELSEIF currentStatus != 'available' THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Property already sold or rented';
+
+    END IF;
+END$$
+
 DELIMITER ;
