@@ -1,3 +1,4 @@
+-- Active: 1774687611691@@127.0.0.1@3306@apex_estates
 USE apex_estates;
 
 select * from agent;
@@ -231,6 +232,27 @@ BEGIN
         SIGNAL SQLSTATE '45000'
         SET MESSAGE_TEXT = 'Property already sold or rented';
 
+    END IF;
+END$$
+
+DELIMITER ;
+
+-- trigger for checking listing type before proceeding for transaction
+DELIMITER $$
+
+CREATE TRIGGER checkListingTypeMatch
+BEFORE INSERT ON transactions
+FOR EACH ROW
+BEGIN
+    DECLARE listingType VARCHAR(10);
+
+    SELECT listing_type INTO listingType
+    FROM property
+    WHERE property_id = NEW.propertyId;
+
+    IF listingType != NEW.transactionType THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Transaction type does not match property listing type';
     END IF;
 END$$
 
