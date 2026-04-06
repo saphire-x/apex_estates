@@ -9,3 +9,9 @@ from property
 where locality_name = 'AHOM GAON' and listing_type='rent' and price<15000 and bhk>=2;
 
 -- query 5
+SELECT p.agentID, AVG(t.transactionAmount) AS avg_sellingPprice,AVG(DATEDIFF(t.transactionDate, p.listed_on)) as avg_days_on_market
+from property as p
+join transactions as t on p.property_id = t.propertyId
+where t.transactionType = 'sale'
+and year(t.transactionDate)=2024
+group by p.agentID;
