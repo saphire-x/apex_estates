@@ -3,7 +3,6 @@ SELECT property_id,house_no,house_name,locality_name,city
 from property
 where price between 2000000 and 6000000;
 
-<<<<<<< HEAD
 
 -- query (d)
   SELECT 
@@ -15,7 +14,6 @@ GROUP BY agentId
 ORDER BY worth DESC;
 
 
-=======
 -- query 3
 select property_id,house_no,house_name,locality_name,city
 from property
@@ -28,4 +26,3 @@ join transactions as t on p.property_id = t.propertyId
 where t.transactionType = 'sale'
 and year(t.transactionDate)=2024
 group by p.agentID;
->>>>>>> 8a56860aee042c43f875f9c6432c845d9acd7c1e
