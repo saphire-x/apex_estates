@@ -282,3 +282,5 @@ BEGIN
 END$$
 
 DELIMITER ;
+
+drop trigger checkPropertyAvailability;
