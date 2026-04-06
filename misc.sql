@@ -1,0 +1,1 @@
+update property set price = price/1000 + 10000 where listing_type = 'rent';
