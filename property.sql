@@ -101,3 +101,5 @@ VALUES
 (98, 44, 71, '3 BHK flat in SARUSAJAI', 'flat', 'sale', 5700000, 1446.0, 3, 6, 'Sun Residency', 'SARUSAJAI', 'Guwahati', '781827', 'rented', '2023-02-24', '2024-06-12', 2018),
 (99, 44, 60, '1 BHK flat in BELTOLA', 'flat', 'rent', 3200000, 790.0, 1, 116, 'Blue Nest', 'BELTOLA', 'Guwahati', '781681', 'sold', '2023-05-26', '2023-11-06', 2023),
 (100, 43, 75, '2 BHK duplex in BHETAPARA', 'duplex', 'rent', 7476000, 1246.0, 2, 67, 'Silver Heights', 'BHETAPARA', 'Guwahati', '781017', 'rented', '2023-04-19', '2023-12-09', 2016);
+
+SELECT * FROM property;
