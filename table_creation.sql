@@ -123,7 +123,7 @@ CREATE TABLE transactions(
 -- Triggers:
 
 -- for increasing the dealcount and rentcount when it is hit in the transaction
-DELIMITER $
+DELIMITER $$
 CREATE TRIGGER updateAgentCounts
 AFTER INSERT ON transactions
 FOR EACH ROW
