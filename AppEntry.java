@@ -18,7 +18,7 @@ import java.util.Scanner;
  */
 public class AppEntry {
 
-    private static final String ADMIN_EMAIL = "navneet202428@gmail.com";
+    private static final String ADMIN_EMAIL = "admin@gmail.com";
 
     public static void main(String[] args) {
         System.out.println("╔══════════════════════════╗");

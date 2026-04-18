@@ -15,7 +15,7 @@ public class DBAdmin {
 
     private static final String DB_URL      = "jdbc:mysql://localhost:3306/apex_estates";
     private static final String DB_USER     = "root";
-    private static final String DB_PASSWORD = "rootkK@123";
+    private static final String DB_PASSWORD = "Root@123";
 
     private static final String[] MENU_OPTIONS = {
             "Run custom SQL query",

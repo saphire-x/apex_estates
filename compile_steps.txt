@@ -1,3 +1,8 @@
 #How to compile ?
+#ON LINUX
 step-1)javac -cp "lib/*" file_name.java
 step-2)java -cp ".:lib/*" file_name
+
+#ON WINDOWS
+step-1)javac -cp "lib/*" file_name
+step-2)java -cp ".;lib/*" file_name

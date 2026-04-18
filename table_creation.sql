@@ -1,4 +1,4 @@
--- Active: 1774687611691@@127.0.0.1@3306@apex_estates
+-- Active: 1776448956234@@127.0.0.1@3306
 USE apex_estates;
 
 select * from agent;
@@ -194,17 +194,25 @@ DELIMITER ;
 -- property with least number of deals and rents
 
 DELIMITER $$
+
 CREATE TRIGGER addAgent
 BEFORE INSERT ON property
-FOR EACH ROW 
+FOR EACH ROW
 BEGIN
-	IF NEW.agentId is NULL THEN
-		SELECT userId INTO NEW.agentId
-		FROM agent
-		ORDER BY (dealCount+rentCount) ASC
-		LIMIT 1;
-	END IF;
+    DECLARE selectedAgent INT;
+
+    IF NEW.agentId IS NULL THEN
+        SELECT userId 
+        INTO selectedAgent
+        FROM agent
+        ORDER BY (dealCount + rentCount) ASC
+        LIMIT 1;
+
+        SET NEW.agentId = selectedAgent;
+    END IF;
+
 END$$
+
 DELIMITER ;
 
 -- trigger for incresing the rating of the agent for successful transaction
