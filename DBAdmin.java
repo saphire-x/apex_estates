@@ -13,9 +13,9 @@ import java.util.List;
 
 public class DBAdmin {
 
-    private static final String DB_URL      = "jdbc:mysql://localhost:3306/apex_estates";
-    private static final String DB_USER     = "root";
-    private static final String DB_PASSWORD = "Root@123";
+    private static final String DB_URL = "jdbc:mysql://localhost:3306/apex_estates";
+    private static final String DB_USER = "root";
+    private static final String DB_PASSWORD = "rootkK@123";
 
     private static final String[] MENU_OPTIONS = {
             "Run custom SQL query",
@@ -24,7 +24,7 @@ public class DBAdmin {
             "View all Properties",
             "View all Sales Transactions",
             "View all Rental Transactions",
-            "Add a new Agent (Basic)",
+            "Add a new Agent",
             "Delete a record by ID",
             "Exit"
     };
@@ -40,14 +40,13 @@ public class DBAdmin {
             e.printStackTrace();
         } finally {
             try {
-                if (screen != null) screen.stopScreen();
+                if (screen != null)
+                    screen.stopScreen();
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
         }
     }
-
-    // ─── Main Menu ────────────────────────────────────────────────────────────
 
     public static void runAdminMenu(Screen screen) throws Exception {
         int selectedIndex = 0;
@@ -101,17 +100,9 @@ public class DBAdmin {
         screen.refresh();
     }
 
-    // ─── Text Input via Lanterna ──────────────────────────────────────────────
-
-    /**
-     * Shows a prompt and reads a line of text using Lanterna keys.
-     * Supports typing, Backspace, and Enter.
-     * Returns null if the user presses Escape (go back).
-     */
     private static String readLine(Screen screen, String prompt, int row) throws Exception {
         StringBuilder input = new StringBuilder();
         while (true) {
-            // Draw prompt + current input
             screen.clear();
             TextGraphics tg = screen.newTextGraphics();
             tg.setForegroundColor(TextColor.ANSI.CYAN);
@@ -124,37 +115,31 @@ public class DBAdmin {
 
             KeyStroke key = screen.readInput();
             if (key.getKeyType() == KeyType.Escape) {
-                return null; // caller treats null as "go back"
+                return null;
             } else if (key.getKeyType() == KeyType.Enter) {
                 return input.toString().trim();
             } else if (key.getKeyType() == KeyType.Backspace) {
-                if (input.length() > 0) input.deleteCharAt(input.length() - 1);
+                if (input.length() > 0)
+                    input.deleteCharAt(input.length() - 1);
             } else if (key.getKeyType() == KeyType.Character && key.getCharacter() != null) {
                 input.append(key.getCharacter());
             }
         }
     }
 
-    /**
-     * Multi-field form: shows each field one at a time, collects all values.
-     * Returns null if the user presses Escape on any field.
-     */
     private static String[] readForm(Screen screen, String title, String[] fields) throws Exception {
         String[] values = new String[fields.length];
         for (int i = 0; i < fields.length; i++) {
-            String header = title + "  [Field " + (i + 1) + " of " + fields.length + "]";
-            String value = readLine(screen, header + "\n\n" + fields[i] + ":", 6);
-            // readLine uses the prompt in one string; let's draw title + field separately
-            // (we'll handle it inside the loop with a custom draw)
-            value = readFormField(screen, title, fields, i, values);
-            if (value == null) return null; // user pressed ESC
+            String value = readFormField(screen, title, fields, i, values);
+            if (value == null)
+                return null;
             values[i] = value;
         }
         return values;
     }
 
-    /** Draws the form with all fields, highlighting the current one. */
-    private static String readFormField(Screen screen, String title, String[] fields, int current, String[] filled) throws Exception {
+    private static String readFormField(Screen screen, String title, String[] fields, int current, String[] filled)
+            throws Exception {
         StringBuilder input = new StringBuilder();
         while (true) {
             screen.clear();
@@ -167,15 +152,16 @@ public class DBAdmin {
             for (int i = 0; i < fields.length; i++) {
                 int row = 4 + i * 2;
                 if (i < current) {
-                    // Already filled
                     tg.setForegroundColor(TextColor.ANSI.GREEN);
-                    tg.putString(2, row, fields[i] + ": " + filled[i]);
+                    String display = fields[i].toLowerCase().contains("password") ? "********" : filled[i];
+                    tg.putString(2, row, fields[i] + ": " + display);
                 } else if (i == current) {
-                    // Active field
                     tg.setForegroundColor(TextColor.ANSI.WHITE);
-                    tg.putString(2, row, fields[i] + ": " + input + "_");
+                    String typed = fields[i].toLowerCase().contains("password")
+                            ? "*".repeat(input.length())
+                            : input.toString();
+                    tg.putString(2, row, fields[i] + ": " + typed + "_");
                 } else {
-                    // Not yet reached
                     tg.setForegroundColor(TextColor.ANSI.BLACK);
                     tg.putString(2, row, fields[i] + ":");
                 }
@@ -188,30 +174,31 @@ public class DBAdmin {
             } else if (key.getKeyType() == KeyType.Enter) {
                 return input.toString().trim();
             } else if (key.getKeyType() == KeyType.Backspace) {
-                if (input.length() > 0) input.deleteCharAt(input.length() - 1);
+                if (input.length() > 0)
+                    input.deleteCharAt(input.length() - 1);
             } else if (key.getKeyType() == KeyType.Character && key.getCharacter() != null) {
                 input.append(key.getCharacter());
             }
         }
     }
 
-    // ─── Menu Actions ─────────────────────────────────────────────────────────
-
+    // Menu options started
     private static void runCustomQuery(Screen screen) throws Exception {
-        String sql = readLine(screen, "Enter SQL Query:", 6);
-        if (sql == null || sql.isEmpty()) return; // ESC or empty → go back
+        String sql = readLine(screen, "Enter SQL query:", 6);
+        if (sql == null || sql.isEmpty())
+            return;
 
+        String upper = sql.trim().toUpperCase();
         try (Connection con = getConnection(); Statement st = con.createStatement()) {
-            String upper = sql.trim().toUpperCase();
-            if (upper.startsWith("SELECT") || upper.startsWith("SHOW") || upper.startsWith("DESCRIBE")) {
+            if (upper.startsWith("SELECT")) {
                 ResultSet rs = st.executeQuery(sql);
                 List<String> lines = resultSetToLines(rs);
-                lines.add(0, "Query: " + sql);
-                lines.add(1, "─".repeat(60));
+                lines.add(0, "─".repeat(60));
+                lines.add(0, "  Query Result");
                 showScrollableResult(screen, lines);
             } else {
-                int affected = st.executeUpdate(sql);
-                showMessage(screen, "OK — " + affected + " row(s) affected.");
+                int rows = st.executeUpdate(sql);
+                showMessage(screen, rows + " row(s) affected.");
             }
         } catch (SQLException e) {
             showMessage(screen, "SQL Error: " + e.getMessage());
@@ -219,13 +206,15 @@ public class DBAdmin {
     }
 
     private static void showAllTables(Screen screen) throws Exception {
-        executeAndDisplay(screen, "SHOW TABLES", "Database Tables");
+        executeAndDisplay(screen,
+                "SELECT table_name FROM information_schema.tables WHERE table_schema = DATABASE()",
+                "Tables in apex_estates");
     }
 
     private static void showAllAgents(Screen screen) throws Exception {
         executeAndDisplay(screen,
                 "SELECT u.name, a.userId, a.experienceYears, a.salary, a.rating, a.dealCount, a.rentCount " +
-                "FROM agent a JOIN users u ON a.userId = u.userId",
+                        "FROM agent a JOIN users u ON a.userId = u.userId",
                 "Agents List");
     }
 
@@ -241,31 +230,73 @@ public class DBAdmin {
 
     private static void showAllRentals(Screen screen) throws Exception {
         executeAndDisplay(screen,
-                "SELECT * FROM transactions WHERE transactionType = 'rent'",
+                "select a.userId,p.locality from agent a inner join property p on a.userId = p.agentId where p.status = 'rented';",
                 "Rental Records");
     }
 
     private static void addAgent(Screen screen) throws Exception {
         String[] values = readForm(screen,
-                "Add New Agent (requires an existing User ID)",
-                new String[]{"User ID", "Experience Years", "Salary"});
-        if (values == null) return; // user pressed ESC
+                "Add New Agent",
+                new String[] { "Name", "Email", "Phone Number", "Password", "Experience Years", "Salary" });
+        if (values == null)
+            return;
+
+        String name = values[0];
+        String email = values[1];
+        String phone = values[2];
+        String password = values[3];
+        String expStr = values[4];
+        String salStr = values[5];
+
+        if (name.isEmpty() || email.isEmpty() || password.isEmpty()) {
+            showMessage(screen, "Name, email, and password are required. Press any key.");
+            return;
+        }
+
+        // Hash the password before storing
+        String hashedPassword = AppEntry.sha256(password);
+        if (hashedPassword == null) {
+            showMessage(screen, "Error hashing password. Press any key.");
+            return;
+        }
 
         try {
-            int id  = Integer.parseInt(values[0]);
-            int exp = Integer.parseInt(values[1]);
-            int sal = Integer.parseInt(values[2]);
+            int exp = expStr.isEmpty() ? 0 : Integer.parseInt(expStr);
+            int sal = salStr.isEmpty() ? 0 : Integer.parseInt(salStr);
 
-            String sql = String.format(
-                    "INSERT INTO agent (userId, experienceYears, salary, rating, dealCount, rentCount) " +
-                    "VALUES (%d, %d, %d, 0.0, 0, 0)", id, exp, sal);
+            try (Connection con = getConnection()) {
+                con.setAutoCommit(false);
 
-            try (Connection con = getConnection(); Statement st = con.createStatement()) {
-                st.executeUpdate(sql);
-                showMessage(screen, "Agent created for User ID " + id);
+                PreparedStatement psUser = con.prepareStatement(
+                        "INSERT INTO users (name, email, phoneNumber, passwordHash) VALUES (?, ?, ?, ?)",
+                        Statement.RETURN_GENERATED_KEYS);
+                psUser.setString(1, name);
+                psUser.setString(2, email);
+                psUser.setString(3, phone);
+                psUser.setString(4, hashedPassword);
+                psUser.executeUpdate();
+
+                ResultSet generatedKeys = psUser.getGeneratedKeys();
+                if (!generatedKeys.next()) {
+                    con.rollback();
+                    showMessage(screen, "Failed to get new userId. Press any key.");
+                    return;
+                }
+                int newUserId = generatedKeys.getInt(1);
+
+                PreparedStatement psAgent = con.prepareStatement(
+                        "INSERT INTO agent (userId, experienceYears, salary, rating, dealCount, rentCount) " +
+                                "VALUES (?, ?, ?, 0.0, 0, 0)");
+                psAgent.setInt(1, newUserId);
+                psAgent.setInt(2, exp);
+                psAgent.setInt(3, sal);
+                psAgent.executeUpdate();
+
+                con.commit();
+                showMessage(screen, "Agent '" + name + "' created with userId " + newUserId + ". Press any key.");
             }
         } catch (NumberFormatException e) {
-            showMessage(screen, "Invalid number input. Please enter integers only.");
+            showMessage(screen, "Experience and Salary must be numbers. Press any key.");
         } catch (SQLException e) {
             showMessage(screen, "DB Error: " + e.getMessage());
         }
@@ -274,8 +305,9 @@ public class DBAdmin {
     private static void deleteRecord(Screen screen) throws Exception {
         String[] values = readForm(screen,
                 "Delete a Record",
-                new String[]{"Table Name", "ID Column (e.g. userId)", "ID Value"});
-        if (values == null) return;
+                new String[] { "Table Name", "ID Column (e.g. userId)", "ID Value" });
+        if (values == null)
+            return;
 
         String sql = "DELETE FROM " + values[0] + " WHERE " + values[1] + " = " + values[2];
         try (Connection con = getConnection(); Statement st = con.createStatement()) {
@@ -286,12 +318,10 @@ public class DBAdmin {
         }
     }
 
-    // ─── Display Helpers ──────────────────────────────────────────────────────
-
     static void executeAndDisplay(Screen screen, String sql, String title) throws Exception {
         try (Connection con = getConnection();
-             Statement st  = con.createStatement();
-             ResultSet rs  = st.executeQuery(sql)) {
+                Statement st = con.createStatement();
+                ResultSet rs = st.executeQuery(sql)) {
 
             List<String> lines = resultSetToLines(rs);
             lines.add(0, "─".repeat(60));
@@ -305,16 +335,15 @@ public class DBAdmin {
 
     private static List<String> resultSetToLines(ResultSet rs) throws SQLException {
         List<String> lines = new ArrayList<>();
+
         ResultSetMetaData meta = rs.getMetaData();
         int cols = meta.getColumnCount();
 
-        // Seed widths from column header lengths
         int[] widths = new int[cols];
         for (int i = 1; i <= cols; i++) {
             widths[i - 1] = meta.getColumnName(i).length();
         }
 
-        // Buffer all data rows first so we can measure real max widths
         List<String[]> dataRows = new ArrayList<>();
         while (rs.next()) {
             String[] row = new String[cols];
@@ -326,7 +355,6 @@ public class DBAdmin {
             dataRows.add(row);
         }
 
-        // Header
         StringBuilder header = new StringBuilder();
         StringBuilder divider = new StringBuilder();
         for (int i = 1; i <= cols; i++) {
@@ -337,7 +365,6 @@ public class DBAdmin {
         lines.add(header.toString());
         lines.add(divider.toString());
 
-        // Rows
         int rowCount = dataRows.size();
         for (String[] dataRow : dataRows) {
             StringBuilder row = new StringBuilder();
@@ -353,51 +380,63 @@ public class DBAdmin {
     }
 
     private static void showScrollableResult(Screen screen, List<String> lines) throws Exception {
-        int offset = 0;
+        int offset = 0; // vertical scroll
+        int hOffset = 0; // horizontal scroll
         int visibleRows = screen.getTerminalSize().getRows() - 4;
 
         while (true) {
             screen.clear();
             TextGraphics tg = screen.newTextGraphics();
+            int termCols = screen.getTerminalSize().getColumns();
+            int displayWidth = termCols - 2;
 
             tg.setForegroundColor(TextColor.ANSI.YELLOW);
-            tg.putString(2, 0, "UP/DOWN to scroll  |  Q or ESC to go back");
+            tg.putString(2, 0, "Arrows: scroll  |  LEFT/RIGHT: pan  |  Q/ESC: back");
             tg.setForegroundColor(TextColor.ANSI.WHITE);
 
             for (int i = 0; i < visibleRows; i++) {
                 int lineIdx = offset + i;
                 if (lineIdx < lines.size()) {
-                    // Clip to terminal width to avoid wrapping artifacts
                     String line = lines.get(lineIdx);
-                    int maxWidth = screen.getTerminalSize().getColumns() - 2;
-                    if (line.length() > maxWidth) line = line.substring(0, maxWidth);
-                    tg.putString(1, i + 2, line);
+                    // horizontal slice
+                    int start = Math.min(hOffset, line.length());
+                    String slice = line.substring(start);
+                    if (slice.length() > displayWidth)
+                        slice = slice.substring(0, displayWidth);
+                    tg.putString(1, i + 2, slice);
                 }
             }
 
-            // Scroll indicator
             tg.setForegroundColor(TextColor.ANSI.CYAN);
             tg.putString(2, screen.getTerminalSize().getRows() - 1,
-                    "Line " + (offset + 1) + "/" + lines.size());
+                    "Row " + (offset + 1) + "/" + lines.size() + "  Col >" + hOffset);
             screen.refresh();
 
             KeyStroke k = screen.readInput();
             KeyType type = k.getKeyType();
 
             if (type == KeyType.ArrowDown) {
-                if (offset < lines.size() - visibleRows) offset++;
+                if (offset < lines.size() - visibleRows)
+                    offset++;
             } else if (type == KeyType.ArrowUp) {
-                if (offset > 0) offset--;
+                if (offset > 0)
+                    offset--;
+            } else if (type == KeyType.ArrowRight) {
+                hOffset += 8;
+            } else if (type == KeyType.ArrowLeft) {
+                if (hOffset > 0)
+                    hOffset = Math.max(0, hOffset - 8);
             } else if (type == KeyType.Escape) {
                 break;
             } else if (type == KeyType.Character) {
                 char c = k.getCharacter();
-                if (c == 'q' || c == 'Q') break;
+                if (c == 'q' || c == 'Q')
+                    break;
             }
         }
     }
 
-    private static void showMessage(Screen screen, String msg) throws Exception {
+    static void showMessage(Screen screen, String msg) throws Exception {
         screen.clear();
         TextGraphics tg = screen.newTextGraphics();
         tg.setForegroundColor(TextColor.ANSI.GREEN);
@@ -408,8 +447,7 @@ public class DBAdmin {
         screen.readInput();
     }
 
-    // ─── DB Connection ────────────────────────────────────────────────────────
-
+    // DB connection
     static Connection getConnection() throws SQLException {
         return DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
     }

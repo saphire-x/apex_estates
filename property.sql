@@ -102,4 +102,27 @@ VALUES
 (99, 44, 60, '1 BHK flat in BELTOLA', 'flat', 'rent', 3200000, 790.0, 1, 116, 'Blue Nest', 'BELTOLA', 'Guwahati', '781681', 'sold', '2023-05-26', '2023-11-06', 2023),
 (100, 43, 75, '2 BHK duplex in BHETAPARA', 'duplex', 'rent', 7476000, 1246.0, 2, 67, 'Silver Heights', 'BHETAPARA', 'Guwahati', '781017', 'rented', '2023-04-19', '2023-12-09', 2016);
 
+-- New properties added for agents 77 (Mohan Kumar), 78 (Shailaj), 36 (Aisha Iyer)
+INSERT INTO property
+(property_id, agentID, sellerID, title, property_type, listing_type, price, area_sqft, bhk, house_no, locality_name, city, pincode, year_built, status)
+VALUES
+-- Agent 77: 3 sale + 3 rent
+(217, 77, 46, '3 BHK apartment in ULUBARI',     'apartment', 'sale', 5500000, 1350.0, 3.0, 'A-12', 'ULUBARI',       'Guwahati', '781007', 2019, 'sold'),
+(218, 77, 47, '2 BHK flat in CHANDMARI',         'flat',      'sale', 3800000,  980.0, 2.0, 'B-04', 'CHANDMARI',     'Guwahati', '781003', 2020, 'sold'),
+(219, 77, 48, '4 BHK villa in BELTOLA',          'villa',     'sale', 8200000, 2400.0, 4.0, 'V-01', 'BELTOLA',       'Guwahati', '781028', 2018, 'available'),
+(220, 77, 49, '2 BHK apartment in DISPUR',       'apartment', 'rent',   22000,  900.0, 2.0, 'C-11', 'DISPUR',        'Guwahati', '781005', 2021, 'rented'),
+(221, 77, 50, '3 BHK flat in LALMATI',           'flat',      'rent',   18000, 1100.0, 3.0, 'D-07', 'LALMATI',       'Guwahati', '781029', 2020, 'rented'),
+(222, 77, 51, '1 BHK apartment in GHORAMARA',    'apartment', 'rent',    9500,  550.0, 1.0, 'E-02', 'GHORAMARA',     'Guwahati', '781001', 2022, 'available'),
+-- Agent 78: 3 sale + 3 rent
+(223, 78, 52, '3 BHK house in REHABARI',         'house',     'sale', 4900000, 1500.0, 3.0, 'H-05', 'REHABARI',      'Guwahati', '781008', 2019, 'sold'),
+(224, 78, 53, '2 BHK duplex in NOONMATI',        'duplex',    'sale', 4200000, 1200.0, 2.0, 'N-08', 'NOONMATI',      'Guwahati', '781020', 2020, 'sold'),
+(225, 78, 54, '4 BHK bungalow in BASISTHA',      'bungalow',  'sale', 9500000, 2800.0, 4.0, 'BN-3', 'BASISTHA',      'Guwahati', '781029', 2017, 'available'),
+(226, 78, 55, '2 BHK flat in KAHILIPARA',        'flat',      'rent',   15000,  850.0, 2.0, 'F-14', 'KAHILIPARA',    'Guwahati', '781019', 2021, 'rented'),
+(227, 78, 57, '3 BHK apartment in LOKHRA',       'apartment', 'rent',   20000, 1150.0, 3.0, 'G-09', 'LOKHRA',        'Guwahati', '781040', 2022, 'rented'),
+(228, 78, 58, '1 BHK flat in SARANIA HILLS',     'flat',      'rent',    8500,  500.0, 1.0, 'K-03', 'SARANIA HILLS', 'Guwahati', '781003', 2023, 'available'),
+-- Agent 36: 3 rent properties (agent had 0 rent props)
+(229, 36, 59, '2 BHK apartment in BHANGAGARH',   'apartment', 'rent',   16000,  800.0, 2.0, 'Z-03', 'BHANGAGARH',    'Guwahati', '781005', 2020, 'rented'),
+(230, 36, 60, '3 BHK flat in MALIGAON',           'flat',      'rent',   21000, 1200.0, 3.0, 'M-11', 'MALIGAON',      'Guwahati', '781011', 2021, 'rented'),
+(231, 36, 61, '1 BHK flat in SILPUKHURI',         'flat',      'rent',   10000,  500.0, 1.0, 'S-06', 'SILPUKHURI',    'Guwahati', '781003', 2022, 'available');
+
 SELECT * FROM property;

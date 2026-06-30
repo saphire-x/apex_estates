@@ -32,3 +32,29 @@ VALUES
 ('2024-06-14', 7820000, 'sale', 82, 55, 25, 43),
 ('2024-08-19', 3450000, 'sale', 83, 69, 26, 38);
 
+-- New transactions: agents 77, 78 (new), 36, 40, 41, 43 (rent gap fix)
+INSERT INTO transactions
+(transactionId, transactionDate, transactionAmount, transactionType, propertyId, sellerId, seekerId, agentId)
+VALUES
+-- Agent 77 (Mohan Kumar): 2 sales + 2 rents
+(31, '2024-03-15', 5500000, 'sale', 217, 46, 1, 77),
+(32, '2024-06-20', 3800000, 'sale', 218, 47, 2, 77),
+(33, '2024-04-01',   22000, 'rent', 220, 49, 3, 77),
+(34, '2024-07-10',   18000, 'rent', 221, 50, 4, 77),
+-- Agent 78 (Shailaj): 2 sales + 2 rents
+(35, '2024-05-18', 4900000, 'sale', 223, 52, 2, 78),
+(36, '2024-08-25', 4200000, 'sale', 224, 53, 3, 78),
+(37, '2024-06-01',   15000, 'rent', 226, 55, 4, 78),
+(38, '2024-09-15',   20000, 'rent', 227, 57, 5, 78),
+-- Agent 36 (Aisha Iyer): 2 rents for new rent properties
+(39, '2024-07-08',   16000, 'rent', 229, 59, 2, 36),
+(41, '2024-08-20',   21000, 'rent', 230, 60, 5, 36),
+-- Agent 40 (Fatima Ali): 2 rents (had 0 rents)
+(42, '2024-02-10',   18000, 'rent',  19, 58, 1, 40),
+(43, '2024-05-05',   12000, 'rent',  27, 75, 2, 40),
+-- Agent 41 (Rahul Verma): 2 rents (had 0 rents)
+(44, '2024-03-20',   15000, 'rent',  34, 57, 3, 41),
+(45, '2024-06-15',   19000, 'rent',  77, 70, 4, 41),
+-- Agent 43 (Suresh Yadav): 2 rents (had 0 rents)
+(46, '2024-01-25',   16500, 'rent',  18, 75, 5, 43),
+(47, '2024-04-30',   14000, 'rent',  59, 53, 1, 43);
